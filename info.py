@@ -21,29 +21,29 @@ def is_enabled(value, default):
 PORT = environ.get("PORT", "8080")
 WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '29450452'))
-API_HASH = environ.get('API_HASH', '54759945ff88b52777eec9a455944d31')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '39134569'))
+API_HASH = environ.get('API_HASH', '4e901df1ec6ca3f0717777b65a4b72c3')
+BOT_TOKEN = environ.get('BOT_TOKEN', "8383833294:AAEn6Yg0-vujGFR3_dBUZH-RrKAik-wHGp0")
 PICS = (environ.get('PICS' ,'https://telegra.ph/file/517bc12dd5c1347df10f6.jpg')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1759982322').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001853074923 -1001565553195 -1002112912927 -1001889509068 -1001565553195').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7643842600').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002575896317 -1003257847406 -1003575996412').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP', '')
-auth_channel = environ.get('AUTH_CHANNEL', '-1001889509068')
+auth_channel = environ.get('AUTH_CHANNEL', '-1003830567909')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001860177906')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1003854766404')).split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Kannada_Movie:8792234103@newmoviebot.putozli.mongodb.net/?appName=newmoviebot")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Kannada_Movie")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'newmoviebot')
 MAX_RIST_BTNS = int(environ.get('MAX_RIST_BTNS', "10"))
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 
@@ -72,12 +72,12 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 
 # Bg Remove And Url Shotner 
 RemoveBG_API = environ.get("RemoveBG_API", 'f7stCpqeKmuDeHMX66qH5V8D')
-SHORT_URL = environ.get("SHORT_URL", 'yamlinks.com')
-SHORT_API = environ.get("SHORT_API", '8ba797ded52d10834ad44fc07bf9c659a67167d4')
+SHORT_URL = environ.get("SHORT_URL", 'https://arolinks.com')
+SHORT_API = environ.get("SHORT_API", '4b1f3f4727149030af0795b3c8d03e1e1fa609c6')
 
 # Channel Links 💸 
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/TheBlackXYZ_Movie_Group')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TheBlackXYZ')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/kannada_movres_x444')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+Hs3rfKWE-zZhYThl')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'The_Black_XYZ_SupportChat') # without @
 FSUB_MODE = "REQ"
 REQ_CHANNEL = environ.get("REQ_CHANNEL", "TheBlackXYZBotz")
